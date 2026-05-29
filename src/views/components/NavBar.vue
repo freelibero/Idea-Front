@@ -2,10 +2,10 @@
   <nav
     class="fixed top-0 w-full z-[100] flex justify-between items-center px-margin-desktop h-20 glass-nav border-b border-white/5">
     <!-- Logo -->
-    <div
+    <router-link to="/"
       class="font-headline-md text-headline-md text-secondary font-bold tracking-tighter drop-shadow-sm cursor-pointer">
       IDEA-TOPS
-    </div>
+    </router-link>
 
     <!-- Desktop Nav Links (纯 CSS hover，和原版一致) -->
     <div class="hidden lg:flex gap-8 items-center">
@@ -28,8 +28,8 @@
         </div>
       </div>
 
-      <a class="nav-item font-label-sm text-base uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors duration-300 py-2"
-        href="#">新闻中心</a>
+        <router-link to="/news"
+          class="nav-item font-label-sm text-base uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors duration-300 py-2">新闻中心</router-link>
 
       <!-- 颁奖盛典 -->
       <div class="nav-item relative group py-2">
@@ -59,16 +59,12 @@
         </button>
         <div
           class="nav-dropdown absolute top-full right-0 w-56 bg-midnight-gray border border-secondary/20 shadow-2xl p-4 grid gap-3">
-          <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors"
-            href="#">艾特奖简介</a>
-          <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors"
-            href="#">艾特奖章程</a>
-          <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors"
-            href="#">国际学术委员会</a>
-          <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors"
-            href="#">评审标准</a>
-          <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors"
-            href="#">联系我们</a>
+          <router-link to="/about/intro" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">艾特奖简介</router-link>
+          <router-link to="/about/charter" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">艾特奖章程</router-link>
+          <router-link to="/about/council" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">国际学术委员会</router-link>
+          <router-link to="/about/criteria" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">评审标准</router-link>
+          <router-link to="/news" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">公告信息</router-link>
+          <router-link to="/about/contact" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">联系我们</router-link>
         </div>
       </div>
     </div>
@@ -120,8 +116,8 @@
           </div>
         </div>
 
-        <a class="py-3 font-label-sm text-base uppercase tracking-widest text-on-surface/80 hover:text-secondary border-b border-white/5"
-          href="#">新闻中心</a>
+        <router-link to="/news" class="py-3 font-label-sm text-base uppercase tracking-widest text-on-surface/80 hover:text-secondary border-b border-white/5 block"
+          @click="mobileOpen = false">新闻中心</router-link>
 
         <div class="border-b border-white/5">
           <button
@@ -148,12 +144,12 @@
             <span class="material-symbols-outlined text-[16px]">expand_more</span>
           </button>
           <div v-show="mobileDropdowns.about" class="pb-3 pl-4 flex flex-col gap-2">
-            <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1" href="#">艾特奖简介</a>
-            <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1" href="#">艾特奖章程</a>
-            <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1"
-              href="#">国际学术委员会</a>
-            <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1" href="#">评审标准</a>
-            <a class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1" href="#">联系我们</a>
+            <router-link to="/about/intro" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1 block" @click="mobileOpen = false">艾特奖简介</router-link>
+            <router-link to="/about/charter" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1 block" @click="mobileOpen = false">艾特奖章程</router-link>
+            <router-link to="/about/council" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1 block" @click="mobileOpen = false">国际学术委员会</router-link>
+            <router-link to="/about/criteria" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1 block" @click="mobileOpen = false">评审标准</router-link>
+            <router-link to="/news" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1 block" @click="mobileOpen = false">公告信息</router-link>
+            <router-link to="/about/contact" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary py-1 block" @click="mobileOpen = false">联系我们</router-link>
           </div>
         </div>
 
