@@ -1,10 +1,9 @@
 <template>
   <nav
-    class="fixed top-0 w-full z-[100] flex justify-between items-center px-margin-desktop h-20 glass-nav border-b border-white/5">
+    class="fixed top-0 w-full z-100 flex justify-between items-center px-margin-desktop h-20 glass-nav border-b border-white/5">
     <!-- Logo -->
-    <router-link to="/"
-      class="font-headline-md text-headline-md text-secondary font-bold tracking-tighter drop-shadow-sm cursor-pointer">
-      IDEA-TOPS
+    <router-link to="/" class="shrink-0 cursor-pointer">
+      <img :src="logoImg" alt="IDEA-TOPS" class="h-9 md:h-14 max-w-[140px] md:max-w-none w-auto object-contain object-left" />
     </router-link>
 
     <!-- Desktop Nav Links (纯 CSS hover，和原版一致) -->
@@ -53,10 +52,10 @@
 
       <!-- 关于我们 -->
       <div class="nav-item relative group py-2">
-        <button
+        <router-link to="/about/intro"
           class="flex items-center gap-1 font-label-sm text-base uppercase tracking-widest text-on-surface/80 hover:text-secondary transition-colors duration-300">
           关于我们 <span class="material-symbols-outlined text-[16px]">expand_more</span>
-        </button>
+        </router-link>
         <div
           class="nav-dropdown absolute top-full right-0 w-56 bg-midnight-gray border border-secondary/20 shadow-2xl p-4 grid gap-3">
           <router-link to="/about/intro" class="text-sm uppercase tracking-widest text-on-surface/60 hover:text-secondary transition-colors block">艾特奖简介</router-link>
@@ -78,9 +77,17 @@
         <a class="hover:text-secondary" href="#">EN</a>
       </div>
 
-      <button
-        class="px-8 py-2 border border-secondary/50 text-secondary font-label-sm text-base uppercase tracking-widest hover:bg-secondary hover:text-ink-jade transition-all duration-500 active:scale-[0.98]">
+      <router-link to="/login"
+        class="px-8 py-2 border border-secondary/50 text-secondary font-label-sm text-base uppercase tracking-widest hover:bg-secondary hover:text-ink-jade transition-all duration-500 active:scale-[0.98] inline-block">
         立即报名
+      </router-link>
+
+      <button
+        class="hidden sm:flex w-9 h-9 items-center justify-center rounded-full border border-white/10 text-on-surface-variant hover:border-secondary hover:text-secondary transition-all duration-300 ml-2"
+        title="切换主题"
+        @click="toggleTheme"
+      >
+        <span class="material-symbols-outlined text-xl">{{ isDark ? 'light_mode' : 'dark_mode' }}</span>
       </button>
 
       <!-- Mobile Menu Toggle -->
@@ -90,7 +97,7 @@
         <span class="block w-6 h-px bg-on-surface transition-all duration-300"
           :class="{ 'opacity-0': mobileOpen }"></span>
         <span class="block w-6 h-px bg-on-surface transition-all duration-300"
-          :class="{ '-rotate-45 -translate-y-[5px]': mobileOpen }"></span>
+          :class="{ '-rotate-45 translate-y-[-5px]': mobileOpen }"></span>
       </button>
     </div>
 
@@ -157,6 +164,14 @@
           <a class="hover:text-secondary" href="#">中文</a>
           <span>|</span>
           <a class="hover:text-secondary" href="#">EN</a>
+          <span class="ml-4 text-on-surface-variant">|</span>
+          <button
+            class="flex items-center gap-1.5 hover:text-secondary transition-colors"
+            @click="toggleTheme"
+          >
+            <span class="material-symbols-outlined text-base">{{ isDark ? 'light_mode' : 'dark_mode' }}</span>
+            {{ isDark ? '亮色模式' : '暗色模式' }}
+          </button>
         </div>
       </div>
     </div>
@@ -165,8 +180,12 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
+import logoImg from '@/assets/idea_logo_1.png'
+import { useTheme } from '@/composables/useTheme'
 
 defineOptions({ name: 'NavBar' })
+
+const { isDark, toggle: toggleTheme } = useTheme()
 
 const mobileOpen = ref(false)
 const mobileDropdowns = reactive({

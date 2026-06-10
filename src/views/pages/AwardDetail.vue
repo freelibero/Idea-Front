@@ -8,7 +8,7 @@
         style="background-image: url(https://lh3.googleusercontent.com/aida/ADBb0uhB98JeMaPoSJ7tAxdeS1BEeAT2UIqJh9tsh9IbMLylDqmxCje2FxIYhCufzHGlNW-I_YUEGA-NxziWq0mse-oUVQkMQmV0ab8aKVKGEM22BJeIDXO4CQAbEi5czaqDvUDTyTUjF53Ynjm7hWdlFtqbQBHooOrCcxoC5QXRjhFUeADB61tjRGeIUMgcwns-IWBkxWyE2aPPiu0lzVJQD1MqrMgYwIVN4Y2KwUBsJxYU9HdJwbO7MMPhIRw)" />
       <div class="relative z-20 max-w-container-max mx-auto px-margin-desktop w-full pb-32">
         <div class="mb-10 flex items-center gap-6">
-          <span class="w-16 h-[1px] bg-secondary"></span>
+          <span class="w-16 h-px bg-secondary"></span>
           <span class="font-label-xs text-xs text-secondary uppercase tracking-[0.4em] shimmer-gold font-bold">Grand
             Prix Winner 2024</span>
         </div>
@@ -70,7 +70,7 @@
           <div class="absolute -left-20 top-1/4 w-40 h-40 bg-secondary/10 blur-[100px] pointer-events-none"></div>
           <div class="flex gap-6 md:gap-8">
             <!-- Vertical Gold Line Accent -->
-            <div class="w-[1px] bg-gradient-to-b from-secondary via-secondary/20 to-transparent shrink-0"></div>
+            <div class="w-px bg-linear-to-b from-secondary via-secondary/20 to-transparent shrink-0"></div>
             <div class="space-y-6 md:space-y-8">
               <div class="space-y-3 md:space-y-4">
                 <span class="font-label-xs text-xs text-secondary uppercase tracking-[0.4em] block">The Vision</span>

@@ -11,7 +11,7 @@
           class="stagger-in font-sg-body-lg text-sm md:text-sg-body-lg text-sg-architectural-gray tracking-widest uppercase">
           发掘全球最佳设计师与设计作品</p>
         <div ref="s3" class="stagger-in mt-8 md:mt-12 flex justify-center">
-          <div class="w-px h-24 bg-gradient-to-b from-sg-gold to-transparent"></div>
+          <div class="w-px h-24 bg-linear-to-b from-sg-gold to-transparent"></div>
         </div>
       </div>
     </section>
@@ -34,7 +34,7 @@
     <!-- Timeline Banner -->
     <section class="relative py-12 md:py-20 bg-sg-surface-highest overflow-hidden">
       <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-sg-deep-charcoal via-transparent to-sg-deep-charcoal z-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-linear-to-r from-sg-deep-charcoal via-transparent to-sg-deep-charcoal z-10"></div>
         <img class="w-full h-full object-cover grayscale brightness-50"
           src="https://lh3.googleusercontent.com/aida/ADBb0uhQb8gB-5IuR6ul6hqf8gCwBYLwIYJc1AYmanhJwj5re0y2LuO5wXshl2CEX7idbZriAfz-xIIDtR2oL86dMraxinxmdDbQoq8vembSSyjMxrKFcY2BXaCFioRX8GCcPtZEPaCxg2NJg7E4yNPTgB4yljtyLEuCMXlad-nQDVgm5I6YLGGPveu7wushetEAWawrXByyeoq41YCEibvx1P53L_uJGOpoeLdErjzuKAfwZ2ca7HaOmYL-bA" />
       </div>
@@ -131,7 +131,7 @@
       class="stagger-in relative min-h-[40vh] md:min-h-[60vh] flex items-center justify-center py-16 md:py-section-gap overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img class="w-full h-full object-cover scale-110 opacity-40" :src="g6" />
-        <div class="absolute inset-0 bg-gradient-to-t from-sg-deep-charcoal via-sg-deep-charcoal/60 to-transparent">
+        <div class="absolute inset-0 bg-linear-to-t from-sg-deep-charcoal via-sg-deep-charcoal/60 to-transparent">
         </div>
       </div>
       <div class="relative z-10 text-center max-w-3xl px-margin-mobile">

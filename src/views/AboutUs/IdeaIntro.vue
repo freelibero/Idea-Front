@@ -10,7 +10,7 @@
           class="w-full h-full object-cover opacity-40 scale-105 parallax-bg"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOo9xWymLkPzP53_OXw5RfhKjoyfHcmqwOJzRYk2FbyhaHF0yEc-rSkNcHEXdnQsXZxs2fBdNkEO1dwXheONOrNj1kKcTDnwjlmHJ0IedZ9kJh-WJ__Z5pJw5BKr_sxhH8RcEzv8UrjAwwhjwM7WMnQqnyTkKWoTudM_kLS5t7leBI-qDxBYUqm4BiWMcrbNezlZGz8J5MliKKV2ZTvYDZw6iT2vFulILMGVAxL7OUwIhAGVHgk5JzGfBME4iBpNZ6eHdBnSU5i_4"
         />
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
       </div>
       <div class="relative z-10 text-center max-w-4xl px-margin-mobile">
         <span class="block font-label-sm text-sm uppercase tracking-[0.3em] text-secondary mb-6 reveal-on-scroll">Est. 2010</span>
@@ -43,7 +43,7 @@
           <div class="relative group">
             <div class="absolute -inset-4 border-[0.5px] border-midnight-gray group-hover:border-secondary transition-colors duration-500"></div>
             <img
-              class="relative z-10 w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              class="relative z-10 w-full aspect-4/5 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBDwBMSrPGTjjFamm1rxNI-usz6hkZqh5dctYjZJhu6AF64H-vokOISg-iB1lcpzytOKqOI_elp_Tx8dZ1yOaaBKVCuls1uxS4gqmKrLhFFIQ-nlrg6XIl-PqBI1CaXb5ZNmH8Wo7HnKOHLxulqPBNOHs2klepafZvz2_H6OcH9fGmbrrhFRJg94xieMvvi-fJnyKzn8-p8Adnfp60NU_ONxkEiaYwY4LgMtlyNf67Td9PZG0qoo3MeMkiwKYeEYI3CWKMiISZWnc"
             />
           </div>

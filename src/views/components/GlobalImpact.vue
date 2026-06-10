@@ -21,7 +21,7 @@
         <!-- Stats Overlay - 更小更通透 -->
         <div class="absolute bottom-3 md:bottom-6 left-3 md:left-6 grid grid-cols-2 gap-3 md:gap-5 p-3 md:p-5 rounded-lg z-20"
           style="background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); border: 1px solid rgba(228,194,133,0.12);">
-          <div class="border-r border-white/[0.06] pr-5">
+          <div class="border-r border-white/6 pr-5">
             <div class="font-display-hero text-headline-md gold-gradient-text mb-0.5 leading-none">75+</div>
             <div class="font-label-xs text-[10px] text-lead-gray uppercase tracking-widest">
               Countries

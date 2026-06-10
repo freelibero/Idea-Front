@@ -16,7 +16,7 @@
           <div class="col-span-12 md:col-span-4 flex justify-end mt-6 md:mt-0">
             <div class="flex items-center gap-4 text-secondary/50">
               <span class="text-6xl font-display-hero">01</span>
-              <div class="h-[1px] w-24 bg-secondary/30"></div>
+              <div class="h-px w-24 bg-secondary/30"></div>
               <span class="text-xl font-headline-md italic">通知</span>
             </div>
           </div>
@@ -28,10 +28,11 @@
     <!-- Main Content: Announcements List -->
     <main class="max-w-container-max mx-auto px-margin-desktop pb-section-gap">
       <div class="space-y-0">
-        <article
-          v-for="(item, idx) in announcements"
-          :key="idx"
-          class="group relative py-12 border-b-[0.5px] border-midnight-gray hover:border-secondary transition-slow cursor-pointer"
+        <router-link
+          v-for="item in announcements"
+          :key="item.id"
+          :to="`/news/${item.id}`"
+          class="group relative py-12 border-b-[0.5px] border-midnight-gray hover:border-secondary transition-slow cursor-pointer block"
         >
           <div class="grid grid-cols-12 gap-gutter items-start">
             <!-- Date & Tag -->
@@ -56,8 +57,8 @@
               <span class="material-symbols-outlined text-secondary text-4xl">arrow_right_alt</span>
             </div>
           </div>
-          <div class="absolute inset-0 -z-10 bg-secondary/0 group-hover:bg-secondary/[0.02] transition-slow"></div>
-        </article>
+          <div class="absolute inset-0 -z-10 bg-secondary/0 group-hover:bg-secondary/2 transition-slow"></div>
+        </router-link>
       </div>
 
       <!-- Pagination -->
@@ -106,7 +107,7 @@
           </div>
         </div>
         <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]"></div>
-        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-secondary/[0.03] to-transparent pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-full h-full bg-linear-to-br from-secondary/3 to-transparent pointer-events-none"></div>
       </div>
     </section>
 
@@ -117,39 +118,11 @@
 <script setup lang="ts">
 import NavBar from '@/views/components/NavBar.vue'
 import FooterSection from '@/views/components/FooterSection.vue'
+import { announcementsListData } from '@/data/news'
 
 defineOptions({ name: 'AnnounceInform' })
 
-interface Announcement {
-  date: string
-  tag?: string
-  title: string
-  desc: string
-}
-
-const announcements: Announcement[] = [
-  {
-    date: '2024年12月12日',
-    tag: '官方',
-    title: '第15届艾特奖国际空间设计大奖全球征稿正式启动',
-    desc: '我们荣幸宣布2025年度征稿正式开启。诚邀全球建筑师、室内设计师及前瞻性设计工作室提交最具突破性的作品，交由国际专家评审团评审。',
-  },
-  {
-    date: '2024年11月28日',
-    title: '与米兰设计联盟达成战略合作',
-    desc: '艾特奖通过全新的合作框架深化与欧洲设计精英的联系，共同推动可持续城市发展与跨洲建筑交流。',
-  },
-  {
-    date: '2024年11月15日',
-    title: '"绿色建筑"类别评审标准更新',
-    desc: '为契合2030可持续发展目标，组委会已修订绿色建筑类别的评审参数，优先考量循环材料使用与净零运营效率。',
-  },
-  {
-    date: '2024年10月30日',
-    title: '第14届颁奖盛典官方高清影像集正式发布',
-    desc: '重温第14届盛典的辉煌时刻。官方照片与视频档案现已通过数字门户向所有注册参赛者及战略合作伙伴开放。',
-  },
-]
+const announcements = announcementsListData
 </script>
 
 <style scoped>

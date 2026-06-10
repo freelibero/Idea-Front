@@ -5,9 +5,9 @@
       <img
         alt="Grand Design Temple"
         class="w-full h-full object-cover scale-110"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_-N0C8NuW-6gxTGjbAvKll2C9l4Hq8Wy-9yT6PzSzmIFeozVaETjB6Yfkl_bN8pofY4slAEQBMQWiFB4gL4KqKTHu1QTAVJ3ChhiPqxC9sFhNiAvTx4ylAI6m18aWAhBMWQhCABvYvYVfDqeEEMJC4SW-nt2-g6fCjA58hSeOhzT7q3oeQS0BaNDMklAD6C-J3aqx5Q_K8vUdvrievvXNtEY1De0ZG7aoDpmEKesAbpMkGxteyuNr_F5qivcTOpiaBbcUw-JC7Aw"
+        :src="heroBg"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+      <div class="absolute inset-0 bg-linear-to-t from-background via-transparent to-background/50"></div>
       <div class="absolute inset-0 bg-black/40"></div>
       <!-- Saint's Gate Bloom -->
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/10 blur-[120px] rounded-full"></div>
@@ -48,6 +48,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import heroBg from '@/assets/bg-f.png'
 
 defineOptions({ name: 'HeroSection' })
 

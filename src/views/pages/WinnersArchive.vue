@@ -80,19 +80,19 @@
             v-for="(card, idx) in winnerCards"
             :key="idx"
             :to="`/award/${card.id}`"
-            class="card-item group relative aspect-[4/5] overflow-hidden border border-white/5 hover:border-secondary/30 cursor-pointer stagger-in block"
+            class="card-item group relative aspect-4/5 overflow-hidden border border-white/5 hover:border-secondary/30 cursor-pointer stagger-in block"
           >
             <img
               class="w-full h-full object-cover card-img"
               :src="card.image"
               :alt="card.title"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500"></div>
             <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full card-info">
               <span class="font-label-xs text-secondary/90 uppercase tracking-[0.2em] mb-2 block">{{ card.award }}</span>
               <h3 class="font-headline-md text-white text-xl md:text-2xl mb-1">{{ card.title }}</h3>
               <p class="font-body-md text-on-surface-variant/80 text-sm md:text-base mb-3">{{ card.location }}</p>
-              <div class="h-px bg-gradient-to-r from-secondary/60 to-transparent w-0 group-hover:w-full transition-all duration-700"></div>
+              <div class="h-px bg-linear-to-r from-secondary/60 to-transparent w-0 group-hover:w-full transition-all duration-700"></div>
             </div>
           </router-link>
         </div>

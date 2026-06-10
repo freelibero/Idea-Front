@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('@/views/pages/SignUp.vue'),
     },
     {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/pages/Login.vue'),
+    },
+    {
       path: '/winners',
       name: 'winners',
       component: () => import('@/views/pages/WinnersArchive.vue'),
@@ -33,6 +38,11 @@ const router = createRouter({
       path: '/news',
       name: 'announcements',
       component: () => import('@/views/AboutUs/AnnounceInform.vue'),
+    },
+    {
+      path: '/news/:id',
+      name: 'newsDetail',
+      component: () => import('@/views/pages/NewsDetail.vue'),
     },
     {
       path: '/about/intro',

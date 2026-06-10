@@ -1,58 +1,61 @@
 @import 'tailwindcss';
 
+/* Tailwind v4 class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  /* === 颜色 === */
-  --color-background: #131410;
-  --color-surface: #131410;
-  --color-primary: #c9c6c5;
-  --color-secondary: #e4c285;
-  --color-tertiary: #d8c594;
-  --color-error: #ffb4ab;
-  --color-charcoal: #4a4a4a;
-  --color-outline: #8e9192;
-  --color-surface-tint: #c9c6c5;
-  --color-surface-bright: #393936;
-  --color-surface-dim: #131410;
-  --color-surface-variant: #353531;
-  --color-surface-container: #1f201c;
-  --color-surface-container-low: #1b1c18;
-  --color-surface-container-lowest: #0e0f0b;
-  --color-surface-container-high: #2a2a27;
-  --color-surface-container-highest: #353531;
-  --color-primary-container: #0a0a0a;
-  --color-secondary-container: #5d4514;
-  --color-tertiary-container: #0e0900;
-  --color-error-container: #93000a;
-  --color-primary-fixed: #e5e2e1;
-  --color-primary-fixed-dim: #c9c6c5;
-  --color-secondary-fixed: #ffdea4;
-  --color-secondary-fixed-dim: #e4c285;
-  --color-tertiary-fixed: #f5e1ae;
-  --color-tertiary-fixed-dim: #d8c594;
-  --color-on-surface: #e4e2dd;
-  --color-on-background: #e4e2dd;
-  --color-on-primary: #313030;
+  /* === 颜色（浅色模式默认） === */
+  --color-background: #f5f4f0;
+  --color-surface: #f5f4f0;
+  --color-primary: #444444;
+  --color-secondary: #c9a96e;
+  --color-tertiary: #b8a060;
+  --color-error: #b3261e;
+  --color-charcoal: #888888;
+  --color-outline: #777777;
+  --color-surface-tint: #666666;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #edebe4;
+  --color-surface-variant: #e0dfd7;
+  --color-surface-container: #dddcd3;
+  --color-surface-container-low: #e4e3db;
+  --color-surface-container-lowest: #eae9e3;
+  --color-surface-container-high: #d5d4ca;
+  --color-surface-container-highest: #cdccc2;
+  --color-primary-container: #f0f0f0;
+  --color-secondary-container: #f5ebd4;
+  --color-tertiary-container: #f0ead4;
+  --color-error-container: #fce4e4;
+  --color-primary-fixed: #d0d0d0;
+  --color-primary-fixed-dim: #b8b8b8;
+  --color-secondary-fixed: #e8ce9b;
+  --color-secondary-fixed-dim: #d5b478;
+  --color-tertiary-fixed: #e5d8a8;
+  --color-tertiary-fixed-dim: #d0c088;
+  --color-on-surface: #1a1a1a;
+  --color-on-background: #1a1a1a;
+  --color-on-primary: #ffffff;
   --color-on-secondary: #412d00;
   --color-on-tertiary: #3a2f0b;
-  --color-on-error: #690005;
-  --color-on-surface-variant: #c4c7c7;
-  --color-on-primary-container: #7b7979;
-  --color-on-secondary-container: #d5b478;
-  --color-on-tertiary-container: #87784d;
-  --color-on-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-surface-variant: #555555;
+  --color-on-primary-container: #333333;
+  --color-on-secondary-container: #5d4514;
+  --color-on-tertiary-container: #5e4d1a;
+  --color-on-error-container: #c62828;
   --color-on-primary-fixed: #1c1b1b;
   --color-on-primary-fixed-variant: #474646;
   --color-on-secondary-fixed: #261900;
   --color-on-secondary-fixed-variant: #5a4312;
   --color-on-tertiary-fixed: #231b00;
   --color-on-tertiary-fixed-variant: #524620;
-  --color-inverse-surface: #e4e2dd;
-  --color-inverse-primary: #5f5e5e;
-  --color-inverse-on-surface: #30312d;
-  --color-outline-variant: #444748;
-  --color-midnight-gray: #2a2a2a;
-  --color-ink-jade: #1a1a1a;
-  --color-lead-gray: #8a8a8a;
+  --color-inverse-surface: #1a1a1a;
+  --color-inverse-primary: #999999;
+  --color-inverse-on-surface: #eeeeee;
+  --color-outline-variant: #bbbbbb;
+  --color-midnight-gray: #d5d5d5;
+  --color-ink-jade: #e8e8e0;
+  --color-lead-gray: #666666;
 
   /* === 字体 === */
   --font-display-hero: 'Playfair Display', serif;
@@ -125,6 +128,63 @@
   --text-sg-body-md--line-height: 28px;
   --text-sg-label-caps: 12px;
   --text-sg-label-caps--line-height: 16px;
+}
+
+/* ======================================================
+   暗色模式 -> 覆盖浅色默认值为原先的暗色主题
+   ====================================================== */
+.dark {
+  --color-background: #131410;
+  --color-surface: #131410;
+  --color-primary: #c9c6c5;
+  --color-secondary: #e4c285;
+  --color-tertiary: #d8c594;
+  --color-error: #ffb4ab;
+  --color-charcoal: #4a4a4a;
+  --color-outline: #8e9192;
+  --color-surface-tint: #c9c6c5;
+  --color-surface-bright: #393936;
+  --color-surface-dim: #131410;
+  --color-surface-variant: #353531;
+  --color-surface-container: #1f201c;
+  --color-surface-container-low: #1b1c18;
+  --color-surface-container-lowest: #0e0f0b;
+  --color-surface-container-high: #2a2a27;
+  --color-surface-container-highest: #353531;
+  --color-primary-container: #0a0a0a;
+  --color-secondary-container: #5d4514;
+  --color-tertiary-container: #0e0900;
+  --color-error-container: #93000a;
+  --color-primary-fixed: #e5e2e1;
+  --color-primary-fixed-dim: #c9c6c5;
+  --color-secondary-fixed: #ffdea4;
+  --color-secondary-fixed-dim: #e4c285;
+  --color-tertiary-fixed: #f5e1ae;
+  --color-tertiary-fixed-dim: #d8c594;
+  --color-on-surface: #e4e2dd;
+  --color-on-background: #e4e2dd;
+  --color-on-primary: #313030;
+  --color-on-secondary: #412d00;
+  --color-on-tertiary: #3a2f0b;
+  --color-on-error: #690005;
+  --color-on-surface-variant: #c4c7c7;
+  --color-on-primary-container: #7b7979;
+  --color-on-secondary-container: #d5b478;
+  --color-on-tertiary-container: #87784d;
+  --color-on-error-container: #ffdad6;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-on-primary-fixed-variant: #474646;
+  --color-on-secondary-fixed: #261900;
+  --color-on-secondary-fixed-variant: #5a4312;
+  --color-on-tertiary-fixed: #231b00;
+  --color-on-tertiary-fixed-variant: #524620;
+  --color-inverse-surface: #e4e2dd;
+  --color-inverse-primary: #5f5e5e;
+  --color-inverse-on-surface: #30312d;
+  --color-outline-variant: #444748;
+  --color-midnight-gray: #2a2a2a;
+  --color-ink-jade: #1a1a1a;
+  --color-lead-gray: #8a8a8a;
 }
 
 /* === 移动端间距覆写 === */
