@@ -81,7 +81,7 @@
       </div>
 
       <router-link to="/login"
-        class="px-8 py-2 border border-secondary/50 text-secondary font-label-sm text-base uppercase tracking-widest hover:bg-secondary hover:text-ink-jade transition-all duration-500 active:scale-[0.98] inline-block">
+        class="px-3 md:px-8 py-1.5 md:py-2 border border-secondary/50 text-secondary font-label-sm text-xs md:text-base uppercase tracking-widest hover:bg-secondary hover:text-ink-jade transition-all duration-500 active:scale-[0.98] inline-block whitespace-nowrap shrink-0">
         立即报名
       </router-link>
 
