@@ -31,6 +31,12 @@
 
         <!-- Glassmorphism Card -->
         <div class="glass-panel w-full rounded-xl p-8 md:p-12 relative z-20 flex flex-col">
+          <!-- Back Button -->
+          <router-link to="/"
+            class="absolute top-4 left-4 md:top-6 md:left-6 w-9 h-9 flex items-center justify-center rounded-full border border-midnight-gray text-on-surface-variant hover:border-secondary hover:text-secondary hover:bg-secondary/5 transition-all duration-300"
+          >
+            <span class="material-symbols-outlined text-xl">arrow_back</span>
+          </router-link>
           <!-- Logo -->
           <div class="mb-10 text-center flex flex-col items-center">
             <img :src="logoImg" alt="IDEA-TOPS" class="h-10 md:h-12 w-auto mb-3" />
